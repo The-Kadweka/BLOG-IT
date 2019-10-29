@@ -1,0 +1,5 @@
+Hello {{user.username}}
+Welcome to tumaa-blog
+We have signed up for our application 
+and want to welcome you to the blog.
+ Please enjoy the reviews of all your  favourite films.
