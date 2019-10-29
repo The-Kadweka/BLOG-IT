@@ -1,0 +1,38 @@
+<style>
+    body{
+        background-image:
+        url(https://www.alcorn.law/wp-content/uploads/2019/01/card-coffee-cup-1449082.jpg?91015c&91015c);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+   .container{
+       margin-top: 200px;
+       padding-top: 40px;
+        margin-left: 50px;
+        margin-right: 700px;
+        background-color:rgba(31, 116, 243, 0.8);
+        border-radius: 50px;
+        color:rgb(24, 26, 23);
+        
+    }
+    h2{
+        text-align: center;
+        font-size: large;
+        font-style: italic;
+        text-decoration: underline;
+    }
+    p{
+        font-size: x-large;
+    }
+</style>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<blockquote>
+    <h2>{{quote.author}}</h2>
+    <hr>
+    <p>~{{quote.quote}}</p>
+</blockquote>
+</div>
+
+{% endblock %}

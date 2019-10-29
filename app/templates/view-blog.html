@@ -1,0 +1,56 @@
+<style>
+  body {
+    background-image: url(https://images.pexels.com/photos/2437299/pexels-photo-2437299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+{% extends 'base.html' %}
+ {% import 'macros.html' as macro%}
+
+{%block styles%}
+  {{ super() }}
+{%endblock%}
+
+<!-- content block -->
+{% block content %}
+<div class="container">
+     <div class="col-md-12">
+        <p class="text-left"><a class="btn btn-primary" href="{{url_for('.new_blog',id=blogs.category_id)}}">Post Blog</a></p>
+        <div class="well" style="background-color:aquamarine">
+          <h3>{{blogs.content}}</h3>
+        </div>
+
+<!--end of content block-->
+<ul class="list-inline">
+  <li class="list-inline-item">{{likes|length}}</li>
+  <li class="list-inline-item"><a class="btn btn-warning" href="{{url_for('main.like',id=blogs.id)}}">Like<i class="fa fa-thumbs-up fa-2x"></i></a></li>
+    <li class="list-inline-item"><a class="btn btn-primary" href="#">Delete<i class="fa fa-thumbs-down fa-2x"></i> </a></li>
+  <li class="list-inline-item"><a class="btn btn-warning" href="{{url_for('main.dislike',id=blogs.id)}}">Dislike<i class="fa fa-thumbs-down fa-2x"></i> </a></li>
+  <li class="list-inline-item">{{dislike|length}}</li>
+<!-- comments block -->
+
+        <div class="col-md-6 col-offset-1">
+          <table>
+            <tr>
+              <td><h4 class="text-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary" href="{{url_for('.post_comment',id=blogs.id)}}"> Add your comment</a></h4></td>
+            </tr>
+             
+            
+          </table>
+
+         {% if comment %}
+         {{ macro.displaySpecificBlogs(comment)}}
+         <hr>
+         {%else%}
+         <h3 class="text-center" style="color:black; font-size: bold;">No comments </h3>
+         {% endif %}
+        </div>
+
+    </div>
+  </div>
+  </ul>
+
+<!--end of comments block-->
+
+{% endblock %}

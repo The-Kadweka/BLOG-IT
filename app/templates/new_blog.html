@@ -1,0 +1,23 @@
+<style>
+  body {
+    background-image: url(https://images.pexels.com/photos/2001829/pexels-photo-2001829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  </style>
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+ {%block styles%}
+  {{ super() }}
+
+{%endblock%}
+
+{% block content %}
+<div class="container col-md-6" style="text-align:center">
+    <h3>{{category.name|upper}} Blog</h3>
+  <div class="well">
+    <hr>
+    {{wtf.quick_form(blog_form)}}
+ </div>
+</div>
+{% endblock %}

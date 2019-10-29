@@ -1,0 +1,47 @@
+<style>
+  body{
+    background-image: url(https://content.thriveglobal.com/wp-content/uploads/2019/03/Passion1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+{% macro displayCategoryList(category_list) %}
+  {% for category in category_list%}
+        <div>
+
+          <a href="{{url_for('.category',id=category.id)}}"><p>{{category.name|upper}}</p></a>
+        </div>
+
+    {% endfor %}
+{% endmacro %}
+
+{% macro displayBlogs(blog_list) %}
+  {% for blogs in blog_list %}
+  <div class="col-md-12">
+    <div class="well">
+      <div class="row">
+        <div></div>
+        <p>{{blogs.name|upper}}</p></a>
+        <div class="col-md-10 col-sm-12">
+            <h3>{{blogs.content}}</h3>
+              <h4>  <span><a href=" {{url_for('.view_blogs',id=blogs.id)}}">Read comments</a></span>  </h4>
+
+            <a href=" {{url_for('.post_comment',id=blogs.id)}}"><h4>COMMENT</h4></a>
+        </div>
+        </div>
+    </HISTORY> ..
+
+  </div>
+  {% endfor %}
+{% endmacro %}
+
+
+{% macro displaySpecificBlogs(specific_blogs_list) %}
+ {% for comment in specific_blogs_list %}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+        <hr>
+        <p style="color:black; font-size: bold;">{{comment.opinion}} </p>
+         <p style="text-align:right; color:black; font-size:10px;">{{comment.time_posted.strftime('%Y/%m/%d || %r') }}</p>
+    </div>
+  {% endfor %}
+{% endmacro %}

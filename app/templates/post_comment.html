@@ -1,0 +1,18 @@
+<style>
+  body {
+    background-image: url(https://images.pexels.com/photos/414062/pexels-photo-414062.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+{% extends 'base.html' %}
+ {% import 'bootstrap/wtf.html' as wtf %}
+  {%block styles%}
+   {{ super() }}
+{%endblock%}
+
+{% block content %}
+<div class="container">
+  {{wtf.quick_form(comment_form)}}
+</div>
+{% endblock %}

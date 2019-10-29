@@ -1,0 +1,87 @@
+<style>
+  al,
+  li {
+    display: inline;
+    list-style: none;
+    font-size: large;
+    margin: 15px;
+    }
+
+  li al {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    display: inline;
+
+
+  }
+
+  li al:hover {
+    color: darkolivegreen;
+
+  }
+  blockquote{
+    background: red;
+    color: azure;
+    border-radius: 50px;
+  }
+    body {
+      background-image: url(https://images.pexels.com/photos/2973098/pexels-photo-2973098.jpeg?cs=srgb&dl=architectural-design-architecture-buildings-2973098.jpg&fm=jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+    }
+</style>
+<script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Charm|Kaushan+Script" rel="stylesheet">
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+{% block styles%}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container">
+
+  <div class="tuma" style='font-size: 3vh; color: white'>
+          <p>~{{quote.quote}}</p>
+          <span>{{quote.author}}</span>
+
+        <!-- <hr class="clearfix w-100 d-md-none pb-3">  -->
+
+        <!-- Grid column -->
+
+
+        </div>
+
+      </div>
+      </footer>
+      <div class="container" style="font-family: 'Indie Flower', cursive; padding-top: 10%;" style="text-align: center;">
+        <div class="row">
+          <h4 class="text-left"><a class="btn btn-success" href="/add/category"> Add a blog Category </a></h4>
+
+          <div class="jumbotron" style='background-color: pink; width: 45%; '>
+          <h3>CATEGORIES</h3>
+           <div style='color: red;'>
+          {{ macro.displayCategoryList(categories) }}</div>
+
+      </div>
+
+
+  
+
+  </footer>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}
