@@ -1,4 +1,6 @@
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
   body {
     background-image: url(https://images.pexels.com/photos/414062/pexels-photo-414062.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
     background-repeat: no-repeat;
@@ -12,7 +14,7 @@
 {%endblock%}
 
 {% block content %}
-<div class="container">
+<div class="container"  style="font-family: 'Lobster', cursive;"">
   {{wtf.quick_form(comment_form)}}
 </div>
 {% endblock %}

@@ -1,4 +1,6 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
   body {
     background-image: url(https://images.pexels.com/photos/2437299/pexels-photo-2437299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
     background-repeat: no-repeat;
@@ -14,7 +16,7 @@
 
 <!-- content block -->
 {% block content %}
-<div class="container">
+<div class="container"  style="font-family: 'Lobster', cursive;>
      <div class="col-md-12">
         <p class="text-left"><a class="btn btn-primary" href="{{url_for('.new_blog',id=blogs.category_id)}}">Post Blog</a></p>
         <div class="well" style="background-color:aquamarine">

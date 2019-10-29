@@ -1,4 +1,5 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
   body {
     background-image: url(https://images.pexels.com/photos/2719393/pexels-photo-2719393.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
     background-repeat: no-repeat;
@@ -11,14 +12,14 @@
 <!-- content block -->
 {% block content %}
 
-  <div class=" col-md-10 col-md-offset-1 col-sm-12">
+  <div class=" col-md-10 col-md-offset-1 col-sm-12" style="font-family: 'Lobster', cursive;">
       <h3 class="text-center">{{category.name|upper}}</h3>
        <a class="btn btn-primary text-center text-danger " href="/category/new-blog/{{category.id}}"> Post a Blog</a>
        <HR>
   </div>
 
   {% if blogs %}
-      <div class="col-sm-12 col-md-8">
+      <div class="col-sm-12 col-md-8" style="font-family: 'Lobster', cursive;>
           {{ macro.displayBlogs(blogs)}}   
       </div>
   {%else%}

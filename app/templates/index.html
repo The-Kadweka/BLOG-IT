@@ -1,4 +1,6 @@
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
   al,
   li {
     display: inline;
@@ -34,6 +36,7 @@
 </style>
 <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Charm|Kaushan+Script" rel="stylesheet">
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
@@ -42,7 +45,8 @@
 {{ super() }}
 {% endblock %}
 {% block content %}
-<div class="container">
+<div class="container" style="font-family: 'Lobster', cursive;
+">
 
   <div class="tuma" style='font-size: 3vh; color: white'>
           <p>~{{quote.quote}}</p>
@@ -57,7 +61,8 @@
 
       </div>
       </footer>
-      <div class="container" style="font-family: 'Indie Flower', cursive; padding-top: 10%;" style="text-align: center;">
+      <div class="container" style="font-family: 'Lobster', cursive;
+      padding-top: 10%;" style="text-align: center;">
         <div class="row">
           <h4 class="text-left"><a class="btn btn-success" href="/add/category"> Add a blog Category </a></h4>
 
