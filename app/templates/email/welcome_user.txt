@@ -1,5 +1,6 @@
 Hello {{user.username}}
-Welcome to tumaa-blog
-We have signed up for our application 
-and want to welcome you to the blog.
+Welcome to blog-it
+You have signed up for our application 
+and want to welcome you to the blog-it family.
  Please enjoy the reviews of all your  favourite films.
+ Feel free to contact us at katanahussein17@gmail.com
