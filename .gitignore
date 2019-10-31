@@ -1,5 +1,6 @@
+ 
+.DS_Store
 virtual/
 *.pyc
-instance/
+start.sh
 .vscode/
-*.start
