@@ -14,13 +14,12 @@ class Config:
    MAIL_USE_TLS = True
    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-   SUBJECT_PREFIX = 'New Blog'
-   MAIL_USERNAME="developersjuniors@gmail.com"
-   MAIL_PASSWORD="Nairobi001"
+   UPLOADED_PHOTOS_DEST = "app/static/photos"
+   SUBJECT_PREFIX = 'FARMERS-HOME'
    SECRET_KEY = os.environ.get('SECRET_KEY')
    SQLALCHEMY_TRACK_MODIFICATIONS=False
 
-   
+
 class ProdConfig(Config):
    '''
    Production  configuration child class
@@ -39,7 +38,7 @@ class DevConfig(Config):
    '''
    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://moringa:qwerty12@localhost/moringaz'
    DEBUG = True
-   
+
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
